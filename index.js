@@ -160,7 +160,8 @@ app.get('/home' , (req,res) => {
 
 app.get('/profiles', async (req,res)=>{
     const profiles = await Profile.find(); // Fetch all profiles from the database
-    res.send(profiles)
+    // console.log(profiles)
+    res.send(profiles.length !==  0 ? profiles : [])
 })
 
 // params dynamic cheezo ke data ko store krke rkh ta hai
@@ -229,8 +230,6 @@ app.listen('8000',()=>{
     console.log('Server is running on port 8000...')
 })
 
-
-
 //http methods
 
 // 1. get => to get data
@@ -240,3 +239,41 @@ app.listen('8000',()=>{
 // 3. put/patch => to update data 
 
 // 4. delete => to delete data
+
+
+// I want to ask 
+
+// 1. async/ await :  koi bhi cheez ya operation  ko jb rokna hoto 
+// async or await ka use krte hai ye zyada tar mongo ke liye kaam aata hai...
+ 
+// 2. framework : jo kaam bhot repeat hone wala hai to framework usey asaan krte hai or usme pehle se 
+// define features rehte hai or express node ka framework hai... 
+
+// 3. (.then) in fetch :  then me agr fetch complete ho gya to uska response then me aata hai...
+
+// 4. learn a website similar like amazon or flipkart :
+
+// 5. now about the email and pass that how programmer know that the gmail is correct
+
+// 6. stringify/parse : jo object ya array me data hai stringify 
+// us json data ko string me convert kr ke dega or parse string ko json me convert krke deta hai 
+
+// 7. cors : do origin ke beech me data jo share hota hai usko allow ya block kr skta hai usey cors 
+// kehte hai or usey use krta hai 
+
+// 8. e.preventDefault : apna jo kaam hota hai usey agr rokna hai to isey 
+// use krte hai e.preventDefault sirf a tag me hi istemaal krte hai
+
+// 9. span: kisi bhi particular cheez ko styling krna hai to span use hota hai jese ki p tag me kisi 
+// cheez ko styling ke liye to span use krenge by default span inline element hai  
+
+// 10. div : predefine div block space leta hai 
+// by default div blovck element  
+
+// 11. &:hover :  defi chahiye div or span ka bhi
+
+// 12. overlay : defi chahiye schema ka bhi defi 
+
+// 13. schema : schema bata ta hai ki tumhare database me kitni value jaane waali hai 
+
+// 14. howe to use routing 
