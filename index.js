@@ -226,7 +226,7 @@ app.delete('/profileDelete/:id', async (req,res) => {
     res.status(200).json(profiles);
 })
 
-app.listen('8000',()=>{
+app.listen('8001',()=>{
     console.log('Server is running on port 8000...')
 })
 
